@@ -1,0 +1,240 @@
+<div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+            Page Header
+            <small>Optional description</small>
+          </h1>
+          <ol class="breadcrumb">
+        
+            <input type="text" id="myInput" onkeyup="myFunction()"><i class="fa fa-search"></i> 
+          </ol>
+        </section>
+        
+        <div class="scrollmenu">
+        <!-- Main content -->
+        <section class="content">
+      
+          <!-- Your Page Content Here -->
+          <div style="margin: auto; max-width: 1200px; margin-bottom: 70px;">
+              
+            <data-table id="persons-grid"
+                headerTitle="Employees"
+                [items]="items"
+                [itemCount]="itemCount"
+                (reload)="reloadItems($event)"
+        
+                (rowClick)="rowClick($event)"
+                (rowDoubleClick)="rowDoubleClick($event)"
+                [rowTooltip]="rowTooltip"
+                >
+                <data-table-column
+                    [property]="'customerId'"
+                    [header]="'CUSTOMER_ID'"
+                    [sortable]="true"
+                    [resizable]="true"
+                    width="150px">
+                </data-table-column>
+                 
+                <data-table-column
+                    [property]="'kodeCabang'"
+                    [header]="'KODE_CABANG'"
+                    [sortable]="true"
+                    [resizable]="true"
+                    width="150px">
+                </data-table-column> 
+                <data-table-column
+                    [property]="'cabang'"
+                    [header]="'CABANG'"
+                    [sortable]="true"
+                    [resizable]="true"
+                    width="150px">
+                </data-table-column>
+                
+                <data-table-column
+                    [property]="'kanwil'"
+                    [header]="'KANWIL'"
+                    [sortable]="true"
+                    [resizable]="true"
+                    width="150px">
+                </data-table-column>
+                
+                <data-table-column
+                    [property]="'noAplikasi'"
+                    [header]="'NO_APLIKASI'"
+                    [sortable]="true"
+                    [resizable]="true"
+                    width="150px">
+                </data-table-column>
+                
+                 <data-table-column
+                    [property]="'namaDebitur'"
+                    [header]="'NAMA_DEBITUR'"
+                    [sortable]="true"
+                    [resizable]="true"
+                    width="150px">
+                </data-table-column>
+               
+                <data-table-column
+                    [property]="'gender'"
+                    [header]="'GENDER'"
+                    [sortable]="true"
+                    [resizable]="true"
+                    width="150px">
+                </data-table-column>
+                
+                <data-table-column
+                     [property]="'alamatDebitur'"
+                     [header]="'ALAMAT_DEBITUR'"
+                     [sortable]="true"
+                     [resizable]="true"
+                     width="150px">
+                     
+               </data-table-column>
+              
+               <data-table-column
+                     [property]="'alamatAgunan'"
+                     [header]="'ALAMAT_AGUNAN'"
+                     [sortable]="true"
+                     [resizable]="true"
+                     width="150px">
+              </data-table-column>
+          
+              <data-table-column
+                    [property]="'noAplikasi'"
+                    [header]="'NO_APLIKASI'"
+                    [sortable]="true"
+                    [resizable]="true"
+                    width="150px">
+              </data-table-column>
+      
+               <data-table-column
+                    [property]="'tanggalLahir'"
+                    [header]="'TANGGAL_LAHIR'"
+                    [sortable]="true"
+                    [resizable]="true"
+                    width="150px">
+              </data-table-column>
+             
+              <data-table-column
+                    [property]="'sp3kDate'"
+                    [header]="'SP3k_DATE'"
+                    [sortable]="true"
+                    [resizable]="true"
+                    width="150px">
+              </data-table-column>
+              <data-table-column
+                    [property]="'jangkaWaktu'"
+                    [header]="'JANGKA_WAKTU'"
+                    [sortable]="true"
+                    [resizable]="true"
+                    width="150px">
+              </data-table-column>
+      
+              <data-table-column
+                    [property]="'jenisKredit'"
+                    [header]="'JENIS_KREDIT'"
+                    [sortable]="true"
+                    [resizable]="true"
+                    width="150px">
+              </data-table-column>
+      
+              <data-table-column
+                    [property]="'plafondKreditt'"
+                    [header]="'PLAFOND_KREDIT'"
+                    [sortable]="true"
+                    [resizable]="true"
+                    width="150px">
+              </data-table-column>
+      
+              <data-table-column
+                    [property]="'hargaBangunan'"
+                    [header]="'HARGA_BANGUNAN'"
+                    [sortable]="true"
+                    [resizable]="true"
+                    width="150px">
+              </data-table-column>
+      
+              <data-table-column
+                    [property]="'pekerjaan'"
+                    [header]="'PEKERJAAN'"
+                    [sortable]="true"
+                    [resizable]="true"
+                    width="150px">
+              </data-table-column>
+      
+              <data-table-column
+                    [property]="'asuransiJiwa'"
+                    [header]="'ASURANSI_JIWA'"
+                    [sortable]="true"
+                    [resizable]="true"
+                    width="150px">
+              </data-table-column>
+      
+              <data-table-column
+                    [property]="'asuransiFire'"
+                    [header]="'ASURANSI_FIRE'"
+                    [sortable]="true"
+                    [resizable]="true"
+                    width="150px">
+              </data-table-column>
+      
+              <data-table-column
+                    [property]="'asuransiKredit'"
+                    [header]="'ASURANSI_KREDIT'"
+                    [sortable]="true"
+                    [resizable]="true"
+                     width="150px">
+              </data-table-column>
+      
+              <data-table-column
+                    [property]="'dateTimeCreate'"
+                    [header]="'DATE_TIME_CREATE'"
+                    [sortable]="true"
+                    [resizable]="true">
+              </data-table-column>
+      
+                <!-- <data-table-column
+                    [property]="date"
+                    [header]="'Date'"
+                    [sortable]="true">
+                    <ng-template #dataTableCell let-item="item">
+                        <span>{{item.date | date:'yyyy-MM-dd'}}</span>
+                    </ng-template>
+                </data-table-column>
+                
+                <data-table-column
+                    property="phoneNumber"
+                    header="Phone number"
+                    width="150px">
+                </data-table-column>
+                
+                <data-table-column
+                    [property]="'jobTitle'"
+                    [header]="'Job title'"
+                    [visible]="false">
+                </data-table-column>
+                
+                <data-table-column
+                    [property]="active"
+                    [header]="'Active'"
+                    [width]="100"
+                    [resizable]="true">
+                    <ng-template #dataTableHeader let-item="item">
+                        <span style="color: rgb(232, 0, 0)">Active</span>
+                    </ng-template>
+                    <ng-template #dataTableCell let-item="item">
+                        <span style="color: grey">
+                        <span class="glyphicon glyphicon-ok" *ngIf="item.active"></span>
+                        <span class="glyphicon glyphicon-remove" *ngIf="!item.active"></span>
+                        </span>
+                    </ng-template>
+                </data-table-column> -->
+            </data-table>
+        </div>
+      
+        </section>
+        <!-- /.content -->
+      </div>
+      </div>
+      
